@@ -23,7 +23,7 @@
         $args = array(
           'theme_location' => 'main-menu', //main menu dari register_nav_menus di functions.php 
           'container' => 'nav',
-          'container-class' => 'main-menu'
+          'container_class' => 'main-menu'
         );
         wp_nav_menu( $args );
       ?>
