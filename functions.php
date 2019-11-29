@@ -39,8 +39,21 @@ function gymfitness_scripts() {
 add_action('wp_enqueue_scripts', 'gymfitness_scripts');
 
 
+// Enable feature images and other stuff
+function gymfitness_setup() {
+  // Register new image size
+  // To resize the images, use Regenerate thumbnails plugin
+  add_image_size( 'square', 350, 350, true ); // true: resize the image
+  add_image_size( 'portrait', 350, 724, true );
+  add_image_size( 'box', 400, 375, true );
+  add_image_size( 'mediumSize', 700, 400, true );
+  add_image_size( 'blog', 966, 644, true );
 
 
+  // Add feature image
+  add_theme_support( 'post-thumbnails');
+}
+add_action( 'after_setup_theme', 'gymfitness_setup');  // When the theme is activated and ready
 
 
 
